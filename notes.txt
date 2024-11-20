@@ -1,0 +1,26 @@
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+docker run hello-world
+sudo usermod -aG docker $USER
+docker run hello-world
+
+sudo chmod 666 /var/run/docker.sock
+docker run hello-world
+
+docker-compose up airflow-init
+
+docker compose up airflow-init
+docker compoese up
+
+https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
+
+docker compose down
+mkdir -p ./dags ./logs ./plugins ./config
+echo -e "AIRFLOW_UID=$(id -u)" > .env
+docker compose up airflow-init
+docker compose up
+http://0.0.0.0:8080/
+    login airflow
+    password airflow
+docker compose down --volumes --rmi all
